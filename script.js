@@ -23,7 +23,7 @@ const root = new Vue ({
             },
             {
                 text: 'Finire i compiti',
-                completed: false,
+                completed: true,
             },
             {
                 text: 'Pranzare',
