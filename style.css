@@ -6,11 +6,21 @@
     font-family: sans-serif;
 }
 
+body {
+    background-color: #fef6e4;
+    font-weight: 500;
+    color: #001858;
+    height: 100vh;
+    position: relative;
+}
+
 /** UTILITIES */
 
 .container {
     max-width: 800px;
     margin: 0 auto;
+    z-index: 10;
+    position: relative;
 }
 
 .d-flex {
@@ -25,14 +35,15 @@
     border-radius: 20px;
     text-transform: uppercase;
     font-size: 14px;
-    background-color: #00e165;
+    font-weight: 600;
+    color: #001858;
+    background-color: #f582ae;
     transition: background-color 0.2s;
 }
 
 .button:hover,
 .button:focus {
-    background-color: #7cbd99;
-    color: #fff;
+    background-color: #f59bbd;
 }
 
 /** HEADER */
@@ -40,10 +51,15 @@
 .root-header {
     text-align: center;
     margin: 2rem 0;
+
 }
 
 .root-header img {
     max-width: 350px;
+    filter:invert(1);
+    background: #ffe8a7de;
+    padding: 10px;
+    border-radius: 30px;
 }
 
 /** Add New ToDo */
@@ -51,8 +67,10 @@
 .add-todo input {
     flex-grow: 1;
     height: 35px;
+    font-size: 16px;
     border: 0;
     border-bottom: 1px solid #bbb;
+    background-color: #fef6e4;
     outline: none;
     transition: border .4s;
 }
@@ -68,15 +86,15 @@
     margin: 40px 0;
 }
 
-.todo-list {
+.todos-list {
     padding: 15px 30px;
-    background: #f2f2f2;
+    background: #ebdfc4;
     box-shadow: 0 15px 10px -10px rgba(0,0,0, .2);
 }
 
 .todo {
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333;
     cursor: pointer;
 }
 
@@ -105,11 +123,28 @@
 }
 
 .todo .text.completed::before {
-    background-color: #00e165;
+    background-color: #f582ae;
     transition: background-color 0.4s;
 }
 
 .todo .delate-icon:hover:hover {
-    color: rgb(206, 0, 0);
+    color: #f582ae;
     transition: color 0.3s;
+}
+
+/** Waves */
+
+.wave {
+    position: fixed;
+    bottom: -10px;
+}
+
+.first {
+    z-index: 1;
+}
+.second {
+    z-index: 2;
+}
+.third {
+    z-index: 3;
 }
