@@ -1,0 +1,13 @@
+/** GENERALS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/** UTILITIES */
+.container {
+    min-width: 800px;
+    margin: 0 auto;
+}
