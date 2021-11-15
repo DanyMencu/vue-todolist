@@ -16,9 +16,44 @@
 const root = new Vue ({
     el: '#root',
     data: {
-
+        todos: [
+            {
+                text: 'Allenarsi nel pomeriggio',
+                completed: false,
+            },
+            {
+                text: 'Finire i compiti',
+                completed: false,
+            },
+            {
+                text: 'Pranzare',
+                completed: true,
+            },
+        ],
+        newToDo: '',
     },
     methods: {
-        
+        //Add new ToDo at the list
+        addNewToDo() {
+            if( this.newToDo !== '' ) {
+                this.todos.unshift({
+                    text: this.newToDo,
+                    completed: false,
+                });
+
+                //Clean text area
+                this.newToDo = '';
+                //Set focus
+                this.$refs.textarea.focus();
+            }
+        },
+        //Remove ToDo from the lista
+        removeToDo(indexToDo) {
+            this.todos.splice(indexToDo, 1);
+        },
+        //Change ToDo status to true in false or reverse
+        changeStatus(indexToDo) {
+            this.todos[indexToDo].completed = !this.todos[indexToDo].completed;
+        },
     },
 });

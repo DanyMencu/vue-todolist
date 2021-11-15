@@ -9,7 +9,7 @@
 /** UTILITIES */
 
 .container {
-    min-width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -26,12 +26,12 @@
     text-transform: uppercase;
     font-size: 14px;
     background-color: #00e165;
-    transition: background-color 0.4s;
+    transition: background-color 0.2s;
 }
 
 .button:hover,
 .button:focus {
-    background-color: #009141;
+    background-color: #7cbd99;
     color: #fff;
 }
 
@@ -87,6 +87,7 @@
 .todo .text {
     flex-grow: 1;
     padding: 0 30px;
+    position: relative;
 }
 
 .todo .text::before {
@@ -106,4 +107,9 @@
 .todo .text.completed::before {
     background-color: #00e165;
     transition: background-color 0.4s;
+}
+
+.todo .delate-icon:hover:hover {
+    color: rgb(206, 0, 0);
+    transition: color 0.3s;
 }
